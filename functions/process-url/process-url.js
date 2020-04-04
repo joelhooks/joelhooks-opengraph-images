@@ -8,7 +8,10 @@ cloudinary.config({
 
 exports.handler = async function(event, ctx) {
   const {queryStringParameters} = event
-
+  const sourceUrl = `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${qs.stringify(
+    queryStringParameters,
+  )}`
+  console.log('source url:', sourceUrl)
   try {
     // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586028554/jh-og-image/1px.png
     const imageUrl = cloudinary.url(
@@ -19,12 +22,11 @@ exports.handler = async function(event, ctx) {
         // secure: true,
         custom_pre_function: {
           function_type: 'remote',
-          source: `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${qs.stringify(
-            queryStringParameters,
-          )}`,
+          source: sourceUrl,
         },
       },
     )
+    copnsole.log('image url:', imageUrl)
     return {
       statusCode: 302,
       headers: {
