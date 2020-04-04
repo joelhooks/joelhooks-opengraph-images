@@ -1,38 +1,38 @@
-const cloudinary = require("cloudinary").v2;
-const qs = require("querystring");
+const cloudinary = require('cloudinary').v2
+const qs = require('querystring')
 cloudinary.config({
-  cloud_name: "sector",
+  cloud_name: 'sector',
   api_key: process.env.CLOUDINARY_KEY,
-  api_secret: process.env.CLOUDINARY_SECRET
-});
+  api_secret: process.env.CLOUDINARY_SECRET,
+})
 
 exports.handler = async function(event, ctx) {
-  const { queryStringParameters } = event;
+  const {queryStringParameters} = event
 
   try {
-    // https://res.cloudinary.com/sector/image/upload/v1583637123/og-images/img-1.png
+    // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586028554/jh-og-image/1px.png
     const imageUrl = cloudinary.url(
-      `${process.env.CHRIS_IMAGE_VERSION}/og-images/img-1.png`,
+      `${process.env.JOEL_IMAGE_VERSION}/og-images/img-1.png`,
       {
         // resouce_type: "raw"
         sign_url: true,
         // secure: true,
         custom_pre_function: {
-          function_type: "remote",
-          source: `https://relaxed-payne-d1bfbe.netlify.com/.netlify/functions/gen-opengraph-image?${qs.stringify(
-            queryStringParameters
-          )}`
-        }
-      }
-    );
+          function_type: 'remote',
+          source: `https://competent-goodall-d71d0d.netlify.app//.netlify/functions/gen-opengraph-image?${qs.stringify(
+            queryStringParameters,
+          )}`,
+        },
+      },
+    )
     return {
       statusCode: 302,
       headers: {
-        Location: imageUrl
+        Location: imageUrl,
       },
-      body: ""
-    };
+      body: '',
+    }
   } catch (e) {
-    console.log(e);
+    console.log(e)
   }
-};
+}
