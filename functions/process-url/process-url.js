@@ -14,7 +14,7 @@ exports.handler = async function(event, ctx) {
   console.log('source url:', sourceUrl)
   try {
     // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586028554/jh-og-image/1px.png
-    const imageUrl = cloudinary.url(
+    const imageUrl = cloudinary.imageTag(
       `${process.env.JOEL_IMAGE_VERSION}/jh-og-image/1px.png`,
       {
         // resouce_type: "raw"
