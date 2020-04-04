@@ -23,7 +23,7 @@ exports.handler = async function(event, ctx) {
         source: sourceUrl,
       },
     })
-    copnsole.log('image url:', imageUrl)
+    console.log('image url:', imageUrl)
     return {
       statusCode: 302,
       headers: {
