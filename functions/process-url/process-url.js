@@ -8,10 +8,10 @@ cloudinary.config({
 
 exports.handler = async function(event, ctx) {
   const {queryStringParameters} = event
-  const sourceUrl = `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${encodeURI(
-    qs.stringify(queryStringParameters),
-  )}`
+  const query = qs.stringify(queryStringParameters)
+  const sourceUrl = `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${query}`
   console.log('source url:', sourceUrl)
+  console.log('query: ', query)
   try {
     // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586032616/og-images/pixel.png
     const imageUrl = cloudinary.url(`v1586034934/og_images/pixel_zeddhz.png`, {
