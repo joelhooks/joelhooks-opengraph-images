@@ -25,7 +25,7 @@ exports.handler = async function (event, ctx) {
 
     const imageUrl = `https://res.cloudinary.com/${
       process.env.CLOUD_NAME
-    }/image/fetch${encodeURI(
+    }/image/fetch/${encodeURIComponent(
       `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${qs.stringify(
         queryStringParameters,
       )}`,
