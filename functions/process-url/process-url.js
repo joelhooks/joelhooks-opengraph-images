@@ -17,7 +17,7 @@ exports.handler = async function(event, ctx) {
       custom_pre_function: {
         function_type: 'remote',
         source: `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${qs.stringify(
-          queryStringParameters,
+          {title: 'butts', author: 'Joel Hooks', tags: '1, 2, 3'},
         )}`,
       },
     })
