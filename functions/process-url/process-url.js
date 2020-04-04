@@ -19,9 +19,7 @@ exports.handler = async function(event, ctx) {
         // secure: true,
         custom_pre_function: {
           function_type: 'remote',
-          source: `${
-            process.env.DEPLOY_PRIME_URL
-          }/.netlify/functions/gen-opengraph-image?${qs.stringify(
+          source: `https://competent-goodall-d71d0d.netlify.app/.netlify/functions/gen-opengraph-image/.netlify/functions/gen-opengraph-image?${qs.stringify(
             queryStringParameters,
           )}`,
         },
