@@ -12,7 +12,7 @@ exports.handler = async function(event, ctx) {
   console.log('source url:', sourceUrl)
   try {
     // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586032616/og-images/pixel.png
-    const imageUrl = cloudinary.url(`v1586032616/og-images/pixel.png`, {
+    const imageUrl = cloudinary.url(`v1586034934/og_images/pixel_zeddhz.png`, {
       // resouce_type: "raw"
       sign_url: true,
       // secure: true,
