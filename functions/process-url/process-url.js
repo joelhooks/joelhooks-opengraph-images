@@ -13,19 +13,16 @@ exports.handler = async function(event, ctx) {
   )}`
   console.log('source url:', sourceUrl)
   try {
-    // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586028554/jh-og-image/1px.png
-    const imageUrl = cloudinary.imageTag(
-      `${process.env.JOEL_IMAGE_VERSION}/jh-og-image/1px.png`,
-      {
-        // resouce_type: "raw"
-        sign_url: true,
-        // secure: true,
-        custom_pre_function: {
-          function_type: 'remote',
-          source: sourceUrl,
-        },
+    // https://res.cloudinary.com/dg3gyk0gu/image/upload/v1586032616/og-images/pixel.png
+    const imageUrl = cloudinary.url(`v1586032616/og-images/pixel.png`, {
+      // resouce_type: "raw"
+      sign_url: true,
+      // secure: true,
+      custom_pre_function: {
+        function_type: 'remote',
+        source: sourceUrl,
       },
-    )
+    })
     copnsole.log('image url:', imageUrl)
     return {
       statusCode: 302,
