@@ -9,7 +9,10 @@ cloudinary.config({
 exports.handler = async function(event, ctx) {
   const {queryStringParameters} = event
   const query = qs.stringify(queryStringParameters)
-  const sourceUrl = `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${query}`
+  const sourceUrl = `https://competent-goodall-d71d0d.netlify.com/.netlify/functions/gen-opengraph-image?${query.replace(
+    '=',
+    '%3D',
+  )}`
   console.log('source url:', sourceUrl)
   console.log('query: ', query)
   try {
