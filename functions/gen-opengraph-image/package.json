@@ -10,7 +10,8 @@
     "playwright-core": "^0.11.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-textfit": "^1.1.0"
+    "react-textfit": "^1.1.0",
+    "twemoji": "^12.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

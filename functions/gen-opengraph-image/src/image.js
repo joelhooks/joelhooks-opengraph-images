@@ -2,6 +2,21 @@
 import {jsx, Global} from '@emotion/core'
 import Textfit from 'react-textfit'
 import {render} from 'react-dom'
+import twemoji from 'twemoji'
+const emojify = (text) => twemoji.parse(text, twOptions)
+
+const entityMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+  '/': '&#x2F;',
+}
+
+function sanitizeHtml(html) {
+  return String(html).replace(/[&<>"'\/]/g, (key) => entityMap[key])
+}
 
 function App() {
   return (
@@ -60,7 +75,7 @@ function App() {
               lineHeight: 1,
             }}
           >
-            {window.title}
+            {emojify(sanitizeHtml(window.title))}
           </Textfit>
         </h1>
         <div
