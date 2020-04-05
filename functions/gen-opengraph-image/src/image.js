@@ -40,6 +40,12 @@ function App() {
             padding: 0,
             fontFamily: 'system-ui',
           },
+          '.emoji': {
+            height: '1em',
+            width: '1em',
+            margin: '0 .05em 0 .1em',
+            verticalAlign: '-0.1em',
+          },
         }}
       />
       <div
