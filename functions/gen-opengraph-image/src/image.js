@@ -65,33 +65,42 @@ function App() {
         </h1>
         <div
           css={{
-            color: 'white',
-            display: 'flex',
-            justifyContent: 'space-between',
+            color: "white",
+            display: "flex",
+            alignItems: 'center',
+            justifyContent: "space-between",
             fontSize: 36,
-            margin: '-5rem',
+            margin: "-6rem"
           }}
         >
           <ul
             css={{
-              listStyleType: 'none',
-              display: 'flex',
-              '& li': {
-                marginRight: '.5rem',
-                '&:not(:last-child):after': {
+              listStyleType: "none",
+              display: "flex",
+              "& li": {
+                marginRight: ".5rem",
+                "&:not(:last-child):after": {
                   content: "'•'",
-                  marginLeft: '.5rem',
-                },
-              },
+                  marginLeft: ".5rem"
+                }
+              }
             }}
           >
             {window.tags.map((tag) => (
               <li key={tag}>{tag}</li>
             ))}
           </ul>
-          <span>{window.author}</span>
+          <div>
+            <img
+              css={{
+                height: "100px",
+                width: "100px"
+              }}
+              src={window.image}
+              alt=""
+            />
+          </div>
         </div>
-      </div>
     </div>
   )
 }
