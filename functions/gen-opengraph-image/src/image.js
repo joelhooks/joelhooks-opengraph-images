@@ -3,6 +3,8 @@ import {jsx, Global} from '@emotion/core'
 import Textfit from 'react-textfit'
 import {render} from 'react-dom'
 import twemoji from 'twemoji'
+
+const twOptions = {folder: 'svg', ext: '.svg'}
 const emojify = (text) => twemoji.parse(text, twOptions)
 
 const entityMap = {
