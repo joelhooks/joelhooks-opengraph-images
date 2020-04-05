@@ -30,9 +30,7 @@ exports.handler = async function (event, ctx) {
   window.title = "${queryStringParameters.title || 'No Title'}";
   window.tags = ${JSON.stringify(tags)};
   window.author = "${queryStringParameters.author || ''}";
-  window.image = "${
-    queryStringParameters.image || 'https://joelhooks.com/images/logo.png'
-  }"
+  window.image = "https://joelhooks.com/images/logo.png"
   `,
   })
   await page.addScriptTag({content: script})
