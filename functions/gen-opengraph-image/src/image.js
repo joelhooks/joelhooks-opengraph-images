@@ -83,7 +83,7 @@ function App() {
               lineHeight: 1,
             }}
           >
-            {emojify(sanitizeHtml(window.title))}
+            {sanitizeHtml(window.title)}
           </Textfit>
         </h1>
         <div
