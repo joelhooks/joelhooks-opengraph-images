@@ -42,6 +42,7 @@ exports.handler = async function (event, ctx) {
   })
 
   await imagesLoaded(document.getElementById('corgi'))
+  await page.waitForLoadState('networkidle0')
 
   const screenshotBuffer = await page.screenshot({clip: boundingRect})
   await browser.close()
