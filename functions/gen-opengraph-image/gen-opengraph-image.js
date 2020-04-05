@@ -1,6 +1,7 @@
 const playwright = require('playwright-aws-lambda')
 const fs = require('fs')
 const script = fs.readFileSync('./image.js', 'utf-8')
+const imagesLoaded = require('images-loaded')
 
 exports.handler = async function (event, ctx) {
   const browser = await playwright.launchChromium()
@@ -39,6 +40,8 @@ exports.handler = async function (event, ctx) {
     const {x, y, width, height} = corgi.children[0].getBoundingClientRect()
     return {x, y, width, height}
   })
+
+  await imagesLoaded(document.getElementById('corgi'))
 
   const screenshotBuffer = await page.screenshot({clip: boundingRect})
   await browser.close()
