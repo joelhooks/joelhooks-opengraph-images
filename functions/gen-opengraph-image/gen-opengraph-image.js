@@ -38,10 +38,10 @@ exports.handler = async function (event, ctx) {
   const boundingRect = await page.evaluate(() => {
     const corgi = document.getElementById('corgi')
     const {x, y, width, height} = corgi.children[0].getBoundingClientRect()
+
     return {x, y, width, height}
   })
 
-  await imagesLoaded(document.getElementById('corgi'))
   await page.waitForLoadState('networkidle0')
 
   const screenshotBuffer = await page.screenshot({clip: boundingRect})
