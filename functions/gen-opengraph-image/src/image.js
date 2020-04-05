@@ -96,7 +96,7 @@ function App() {
                 height: '100px',
                 width: '100px',
               }}
-              src={window.image}
+              src="https://joelhooks.com/images/logo.png"
               alt=""
             />
           </div>
