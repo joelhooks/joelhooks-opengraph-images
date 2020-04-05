@@ -4,22 +4,6 @@ import Textfit from 'react-textfit'
 import {render} from 'react-dom'
 import Twemoji from 'react-twemoji'
 
-const twOptions = {folder: 'svg', ext: '.svg'}
-const emojify = (text) => twemoji.parse(text, twOptions)
-
-const entityMap = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&quot;',
-  "'": '&#39;',
-  '/': '&#x2F;',
-}
-
-function sanitizeHtml(html) {
-  return String(html).replace(/[&<>"'\/]/g, (key) => entityMap[key])
-}
-
 function App() {
   return (
     <div
@@ -84,7 +68,7 @@ function App() {
             }}
           >
             <Twemoji options={{className: 'emoji', folder: 'svg', ext: '.svg'}}>
-              {sanitizeHtml(decodeURIComponent(window.title))}
+              {window.title}
             </Twemoji>
           </Textfit>
         </h1>
