@@ -84,7 +84,7 @@ function App() {
             }}
           >
             <Twemoji options={{className: 'emoji', folder: 'svg', ext: '.svg'}}>
-              {sanitizeHtml(window.title)}
+              {sanitizeHtml(decodeURIComponent(window.title))}
             </Twemoji>
           </Textfit>
         </h1>
