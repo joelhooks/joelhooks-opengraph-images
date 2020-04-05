@@ -11,7 +11,7 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-textfit": "^1.1.0",
-    "twemoji": "^12.1.5"
+    "react-twemoji": "^0.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",

@@ -2,7 +2,7 @@
 import {jsx, Global} from '@emotion/core'
 import Textfit from 'react-textfit'
 import {render} from 'react-dom'
-import twemoji from 'twemoji'
+import Twemoji from 'react-twemoji'
 
 const twOptions = {folder: 'svg', ext: '.svg'}
 const emojify = (text) => twemoji.parse(text, twOptions)
@@ -83,7 +83,9 @@ function App() {
               lineHeight: 1,
             }}
           >
-            {sanitizeHtml(window.title)}
+            <Twemoji options={{className: 'emoji', folder: 'svg', ext: '.svg'}}>
+              {sanitizeHtml(window.title)}
+            </Twemoji>
           </Textfit>
         </h1>
         <div
