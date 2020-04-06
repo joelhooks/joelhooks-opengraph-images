@@ -39,7 +39,7 @@ function App() {
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
-          justifyContent: 'space-between',
+          justifyContent: 'end',
           borderRadius: 10,
           padding: '8rem',
           boxShadow: `inset 3px 3px 21px 2px rgba(251,17,146,1)`,
@@ -70,14 +70,15 @@ function App() {
           css={{
             color: 'white',
             display: 'flex',
-            alignItems: 'center',
+            alignItems: 'right',
             justifyContent: 'space-between',
             fontSize: 36,
-            margin: '-6.2rem',
+            margin: '-5rem',
+            paddingTop: '3rem',
           }}
         >
-          <div>joelhooks.com</div>
-          <div css={{width: '100px', height: '100px'}}>
+          <div></div>
+          <div css={{width: '75px', height: '75px', paddingTop: '3rem'}}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.38 488.18">
               <title>jh_logo</title>
               <path
