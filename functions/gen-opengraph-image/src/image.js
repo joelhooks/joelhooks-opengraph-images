@@ -78,7 +78,7 @@ function App() {
           }}
         >
           <div></div>
-          <div css={{width: '75px', height: '75px', paddingTop: '3rem'}}>
+          <div css={{width: '90px', height: '90px', paddingTop: '2rem'}}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.38 488.18">
               <title>jh_logo</title>
               <path
