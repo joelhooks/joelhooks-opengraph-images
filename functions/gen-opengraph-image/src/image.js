@@ -9,7 +9,7 @@ function App() {
     <div
       css={{
         width: 1200,
-        height: 630,
+        height: 675,
         background: `rgb(255, 10, 150)`,
         position: 'absolute',
         display: 'flex',
@@ -35,7 +35,7 @@ function App() {
       <div
         css={{
           background: '#070707',
-          margin: '20px',
+          margin: '30px',
           display: 'flex',
           flex: 1,
           flexDirection: 'column',

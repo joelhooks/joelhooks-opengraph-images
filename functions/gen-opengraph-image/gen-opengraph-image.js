@@ -8,7 +8,7 @@ exports.handler = async function (event, ctx) {
   const page = await context.newPage()
   page.setViewportSize({
     width: 1200,
-    height: 630,
+    height: 675,
   })
   await page.setContent(`<!DOCTYPE html>
   <html>
