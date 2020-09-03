@@ -10,7 +10,7 @@ function App() {
       css={{
         width: 1200,
         height: 630,
-        background: `rgb(255, 20, 147)`,
+        background: `rgb(255, 10, 150)`,
         position: 'absolute',
         display: 'flex',
         overflow: 'hidden',
@@ -34,15 +34,14 @@ function App() {
       />
       <div
         css={{
-          background: '#041016',
-          margin: '40px',
+          background: '#070707',
+          margin: '20px',
           display: 'flex',
           flex: 1,
           flexDirection: 'column',
           justifyContent: 'end',
-          borderRadius: 10,
+          borderRadius: 5,
           padding: '8rem',
-          boxShadow: `inset 3px 3px 21px 2px rgba(251,17,146,1)`,
         }}
       >
         <h1
