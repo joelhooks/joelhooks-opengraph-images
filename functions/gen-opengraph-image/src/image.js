@@ -40,6 +40,7 @@ function App() {
           display: 'flex',
           padding: '15px',
           borderRadius: 5,
+          width: '100%',
         }}
       >
         <div css={{width: '255px', transform: 'rotate(190deg)'}}>
@@ -359,6 +360,7 @@ function App() {
         <div
           css={{
             height: '100%',
+            width: '100%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
