@@ -49,7 +49,7 @@ function App() {
         <div css={{width: '285px', transform: 'rotate(190deg)'}}>
           <svg
             viewBox="0 0 224.1 549.01"
-            css={{position: 'absolute', top: '90px'}}
+            css={{position: 'absolute', top: '70px'}}
           >
             <defs>
               <mask
