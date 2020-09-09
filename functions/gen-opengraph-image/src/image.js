@@ -11,9 +11,10 @@ function App() {
         width: 1200,
         height: 675,
         background: `rgb(255, 10, 150)`,
-        position: 'absolute',
         display: 'flex',
         overflow: 'hidden',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       <Global
@@ -36,15 +37,20 @@ function App() {
       <div
         css={{
           background: '#ffffff',
-          margin: '30px',
+          marginRight: '40px',
+          marginLeft: '40px',
           display: 'flex',
-          padding: '15px',
-          borderRadius: 5,
+          paddingRight: '30px',
+          paddingLeft: '30px',
           width: '100%',
+          height: '100%',
         }}
       >
         <div css={{width: '285px', transform: 'rotate(190deg)'}}>
-          <svg viewBox="0 0 224.1 549.01">
+          <svg
+            viewBox="0 0 224.1 549.01"
+            css={{position: 'absolute', top: '90px'}}
+          >
             <defs>
               <mask
                 id="prefix__a"
