@@ -43,7 +43,7 @@ function App() {
           width: '100%',
         }}
       >
-        <div css={{width: '255px', transform: 'rotate(190deg)'}}>
+        <div css={{width: '285px', transform: 'rotate(190deg)'}}>
           <svg viewBox="0 0 224.1 549.01">
             <defs>
               <mask
@@ -375,7 +375,7 @@ function App() {
           >
             <Textfit
               max={256}
-              min={56}
+              min={64}
               style={{
                 minHeight: '80%',
                 maxHeight: '80%',
