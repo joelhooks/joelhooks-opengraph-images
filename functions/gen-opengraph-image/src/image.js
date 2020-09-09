@@ -3,6 +3,7 @@ import {jsx, Global} from '@emotion/core'
 import Textfit from 'react-textfit'
 import {render} from 'react-dom'
 import Twemoji from 'react-twemoji'
+import Arm from './arm'
 
 function App() {
   return (
