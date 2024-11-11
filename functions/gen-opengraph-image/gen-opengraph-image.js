@@ -8,7 +8,7 @@ exports.handler = async function (event, ctx) {
   const page = await context.newPage()
   page.setViewportSize({
     width: 1200,
-    height: 675,
+    height: 630,
   })
   await page.setContent(`<!DOCTYPE html>
   <html>
@@ -17,7 +17,7 @@ exports.handler = async function (event, ctx) {
     </head>
   
     <body>
-      <div id="corgi"><div>NO CORGIS HERE</div></div>
+      <div id="corgi"><div>💀</div></div>
     </body>
   </html>
   `)
